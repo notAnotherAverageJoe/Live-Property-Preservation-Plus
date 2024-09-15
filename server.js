@@ -99,11 +99,11 @@ app.get("/api/weather", async (req, res) => {
   }
 });
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, "..PPP/client/build")));
+app.use(express.static(path.join(__dirname, "/client/build")));
 
 // Serve the React app for all other routes
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..PPP/client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "/client/build", "index.html"));
 });
 // Start server only if not in test environment
 if (require.main === module) {
