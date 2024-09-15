@@ -19,7 +19,7 @@ const ProfilePage = () => {
     const fetchProfile = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/api/users/${id}`,
+          `https://property-preservation-plus.onrender.com/api/api/users/${id}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
