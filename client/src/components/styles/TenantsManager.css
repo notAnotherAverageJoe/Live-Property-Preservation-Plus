@@ -1,0 +1,133 @@
+/* TenantsManager.css */
+
+/* General container styles */
+.tenants-manager-container {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 10px;
+  }
+  
+
+  .tenants-manager-container h2 {
+    color: #555;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    margin-top: 20px;
+  }
+  
+  /* Form styles */
+  .tenants-manager-container form {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tenants-manager-container input,
+  .tenants-manager-container select,
+  .tenants-manager-container button {
+    display: block;
+    width: calc(100% - 22px);
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .tenants-manager-container input[type="text"],
+  .tenants-manager-container input[type="email"] {
+    font-size: 16px;
+  }
+  
+  .tenants-manager-container select {
+    font-size: 16px;
+  }
+  
+  .tenants-manager-container button {
+    background-color: #333;
+
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin: 4px
+  }
+  
+  .tenants-manager-container button:hover {
+    background-color: #4caf50;
+  }
+  
+  .tenants-manager-container button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  /* Filter styles */
+  .tenants-manager-container select {
+    font-size: 16px;
+  }
+  
+  /* Tenant list styles */
+  .tenants-manager-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .tenants-manager-container li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tenants-manager-container li p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .tenants-manager-container li div {
+    display: flex;
+  }
+  
+  .tenants-manager-container button.edit,
+  .tenants-manager-container button.delete {
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 10px;
+  }
+  
+  
+  .pill-link {
+    background-color: #4caf50;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .pill-link:hover {
+    background-color: #4caf50;
+  }
+  
+
+  
+  .primaryButton:hover {
+    background-color: #218838;
+  }

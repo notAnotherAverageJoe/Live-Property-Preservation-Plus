@@ -1,0 +1,121 @@
+/* Container for the login form */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
+}
+
+/* The login form itself */
+.login-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly darker shadow */
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Heading */
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem; /* Adjusted margin */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #333;
+  font-size: 2rem; /* Larger heading */
+}
+
+/* Form field labels */
+.login-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.95rem; /* Slightly larger font */
+}
+
+/* Input fields */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.2rem; /* Increased margin for spacing */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Input focus styles */
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: #75b043;
+  box-shadow: 0 0 6px rgba(117, 176, 67, 0.5); /* Add subtle glow */
+  outline: none;
+}
+
+/* Login type (radio buttons) */
+.login-type {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  color: #75b043;
+}
+
+.login-type label {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.login-type input {
+  margin-right: 0.5rem;
+}
+
+/* Submit button */
+.login-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Added transformation */
+}
+
+/* Button hover effect */
+.login-form button:hover {
+  background-color: #75b043;
+  transform: translateY(-2px); /* Slight upward hover effect */
+}
+
+/* Alert message */
+.alert {
+  background-color: #f9f9f9;
+  border: 1px solid #777e86;
+  color: #75b043;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+  .login-form {
+      padding: 1.5rem;
+  }
+
+  .login-form h2 {
+      font-size: 1.5rem;
+  }
+
+  .login-form input,
+  .login-form button {
+      font-size: 0.9rem;
+  }
+}

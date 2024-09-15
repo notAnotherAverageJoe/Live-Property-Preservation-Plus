@@ -1,0 +1,40 @@
+.tutorial {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tutorial h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .tutorial-step {
+    margin-bottom: 1.5rem;
+  }
+  
+  .tutorial-step p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .tutorial-step img {
+    display: block;
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+ 

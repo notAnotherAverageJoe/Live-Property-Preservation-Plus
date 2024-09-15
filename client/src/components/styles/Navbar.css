@@ -1,0 +1,109 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Navbar Container */
+nav {
+  background-color: #4caf50;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 60px; /* Ensure content is not hidden under the fixed navbar */
+}
+
+
+/* Navbar Inner Container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navbar Brand */
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navbar Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 0.5rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #495057;
+  border-radius: 4px;
+}
+
+/* Toggle Button */
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.toggle-button div {
+  background-color: #ffffff;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #343a40;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      padding: 1rem;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+}
+
+/* Add a margin to the body to avoid content being hidden under the navbar */
+body {
+  padding-top: 60px; /* Height of the navbar */
+}

@@ -1,0 +1,92 @@
+
+
+Level 1. 
+- Dashboard Access.
+- Property Detail - View only.
+- maintenance requests - View, Create, Update, Delete
+- Budget forecast
+
+Level 2.
+- Dashboard Access.
+- Property Detail - View only.
+- maintenance requests - View, Create, Update, Delete.
+- Tenants - Create.
+- Create properties.
+- Create Units on those properties.
+- Edit Financials
+- Budget forecast
+
+Level 3.
+- Dashboard Access.
+- Property Detail - Edit,
+- maintenance requests - View, Create, Update, Delete.
+- Tenants - Create, Update, Delete
+- Create properties.
+- Create Units and Update Units.
+- Financial Transaction - View only and edit.
+- Manage Leases - View, Create, Edit, Delete.
+- Budget forecast
+
+
+Level 4.
+- Dashboard Access.
+- Property Detail - Edit
+- maintenance requests - View, Create, Update, Delete.
+- Tenants - Create, Update, Delete
+- Create properties.
+- Create Units and Update Units.
+- Financial Transaction - View, Create, Edit, Delete
+- Manage Leases - View, Create, Edit, Delete.
+- Role Management - View Roles Created by That User, 
+  Assign Roles to Users
+- Budget forecast
+
+
+Level 5.
+- Dashboard Access.
+- Property Detail - Edit, Delete
+- maintenance requests - View, Create, Update, Delete.
+- Tenants - Create, Update, Delete
+- Create properties.
+- Create Units and Update Units.
+- Financial Transaction - View, Create, Edit, Delete
+- Manage Leases - View, Create, Edit, Delete.
+- Role Management - View Roles Created by That User, 
+    Assign Roles to Users
+- Budget forecast
+- On par with creators
+
+- Not a role you assign it is instead the role you get when you start the company.
+Creator
+- Dashboard Access.
+- Property Detail - View only.
+- maintenance requests - View, Create, Update, Delete.
+- Tenants - Create, Update, Delete
+- Create properties.
+- Create Units and Update Units.
+- Financial Transaction - View, Create, Edit, Delete
+- Manage Leases - View, Create, Edit, Delete.
+- Role Management - View Roles Created by That User, 
+    Assign Roles to Users, Delete Roles
+- Create Users, Assign them Roles
+- Role Management - View Roles Created by That User, 
+    Assign Roles to Users, Delete users
+- Budget forecast
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Access level 3 can manage (edit/delete) only their own properties.
+Access level 4+ can manage all properties.

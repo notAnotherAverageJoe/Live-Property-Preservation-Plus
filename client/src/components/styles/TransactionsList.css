@@ -1,0 +1,32 @@
+/* Styling for the transaction list container */
+.transaction-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Styling for each transaction item */
+  .transaction-item {
+    background-color: #f9f9f9; /* Light background for each transaction */
+    border: 1px solid #ddd; /* Soft border around each transaction */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Space inside the transaction box */
+    margin-bottom: 15px; /* Space between transaction items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for a card-like effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect for transaction items */
+  .transaction-item:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  }
+  
+  /* Styling for the strong element (transaction type) */
+  .transaction-item strong {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+
+  

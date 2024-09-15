@@ -1,0 +1,93 @@
+/* Main container styling */
+.create-role-form-container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+.create-role-form-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+/* Input field styles */
+.create-role-form-input,
+.create-role-form-select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s;
+}
+
+.create-role-form-input:focus,
+.create-role-form-select:focus {
+  border-color: #343a40;
+  outline: none;
+}
+
+/* Button styling */
+.create-role-form-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  color: white;
+  background-color:#343a40;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+   width: 100%
+}
+
+.create-role-form-button:hover {
+  background-color: #4caf50;
+}
+
+/* Message styling */
+.create-role-form-message {
+  font-size: 1rem;
+  color: #4caf50;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.create-role-form-message.error {
+  color: #dc3545;
+}
+
+/* Roles list styling */
+.create-role-form-roles-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  text-align: center;
+  color: #28a745;
+}
+
+.create-role-form-roles-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+  color: #28a745;
+}
+
+.create-role-form-role-item {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

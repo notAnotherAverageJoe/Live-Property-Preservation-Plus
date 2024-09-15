@@ -1,0 +1,268 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #343a40;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 4px
+
+}
+
+button:hover {
+  background-color: #75b043;
+}
+
+
+.alert {
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 4px;
+  border: 1px solid #bce8f1;
+  background-color: #d9edf7;
+  color: #31708f;
+}
+
+.alert-info p {
+  margin: 0;
+  line-height: 1.5; 
+}
+
+button.pill-link {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding for the pill shape */
+  background-color: #343a40;
+  color: #fff; 
+  text-align: center;
+  text-decoration: none; 
+  border-radius: 50px; /* Makes the shape a pill */
+  font-size: 1em; /* Adjust text size */
+  font-weight: 500; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+
+button.pill-link:hover {
+  background-color: #75b043;
+  transform: translateY(-2px); 
+}
+
+button.pill-link:active {
+  background-color: #75b043;
+  transform: translateY(0); 
+}
+
+
+button.pill-link:focus {
+  outline: 2px solid #75b043; 
+}
+
+hr {
+  border: 0; 
+  height: 4px; 
+  background-color: #4CAF50; 
+  margin: 20px 0; 
+}
+/* app.css */
+.unit-list {
+  list-style-type: none; /* Removes default bullet points */
+  padding: 0; 
+}
+
+.unit-item {
+  margin-bottom: 10px; 
+  padding: 10px; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; /* Rounds the corners of the border */
+  background-color: #f9f9f9; 
+}
+
+.unit-link {
+  text-decoration: none; /* Removes underline from links */
+  color: #343a40; /* Sets the color of the link */
+}
+
+.unit-link:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+.edit-button,
+.delete-button {
+  margin-left: 10px; /* Adds space between the buttons */
+  padding: 5px 10px; 
+  border: none; 
+  border-radius: 3px; 
+  cursor: pointer; 
+}
+
+.edit-button {
+  background-color: #28a745; /* Green background for edit button */
+  color: white; 
+}
+
+.edit-button:hover {
+  background-color: #218838; 
+}
+
+.delete-button {
+  background-color: #dc3545; /* Red background for delete button */
+  color: white; 
+}
+
+.delete-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+.triangleBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white; /* Base background color */
+  z-index: -1; /* Make sure it is behind other content */
+}
+
+.triangleBackground::before,
+.triangleBackground::after {
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 40%;
+  background-color: #75b043;
+}
+
+.triangleBackground::before {
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.triangleBackground::after {
+  bottom: 0;
+  right: 0;
+  clip-path: polygon(100% 100%, 0 100%, 100% 0);
+}
+
+
+/* Back to Dashboard button style */
+.backLink .button-link {
+  padding: 12px;
+  font-size: 1em;
+  background-color: #343a40;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block; 
+  transition: background-color 0.3s ease;
+}
+
+.backLink .button-link:hover {
+  background-color: #4caf50;
+}
+
+.backLink .button-link:active {
+  background-color: #343a40;
+}
+
+
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #343a40;
+  align-self: center;
+   text-align: center;
+   
+}
+h2{
+  text-align: center;
+
+
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #343a40;
+  align-self: center;
+  text-align: center;
+  margin: 4px
+}
+
+
+h2 a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+h2 a:hover {
+  color: #333;
+  border-bottom: 2px solid #333;
+}
+h2 {
+  font-size: 1.5rem;
+  margin: 10px;
+  color: #4caf50;
+  transition: color 0.3s ease;
+}
+
+
+/* Button link styling */
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #4caf50;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1; /* Ensure the button is above other elements */
+}
+
+.button-link:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.loading-message {
+  font-size: 1.2rem;
+  color: #999;
+}
+.error-message {
+  color: #dc3545; /* Red color for error message */
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center; 
+}
+.success-message {
+  color: #28a745; 
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center; /* Center align the success message */
+}
