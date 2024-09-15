@@ -26,7 +26,10 @@ const register = async (userData) => {
 // Login user
 const login = async (userData) => {
   try {
-    const response = await axios.post(`${API_URL}/auth/login`, userData);
+    const response = await axios.post(
+      `https://property-preservation-plus.onrender.com/auth/login`,
+      userData
+    );
     if (response.data.token) {
       localStorage.setItem("token", response.data.token);
     }
