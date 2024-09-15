@@ -98,15 +98,13 @@ app.get("/api/weather", async (req, res) => {
     res.status(500).json({ error: "Error fetching weather data" });
   }
 });
-const buildPath = path.join(__dirname, "client", "build");
-
-app.use(express.static(buildPath));
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "../client/build")));
 
 // Serve the React app for all other routes
 app.get("*", (req, res) => {
-  res.sendFile(path.join(buildPath, "index.html"));
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
-
 // Start server only if not in test environment
 if (require.main === module) {
   app.listen(port, () => {
