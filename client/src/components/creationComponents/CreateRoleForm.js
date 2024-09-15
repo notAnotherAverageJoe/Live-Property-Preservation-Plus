@@ -23,11 +23,14 @@ const CreateRoleForm = ({ onRoleCreated }) => {
   // Fetch roles from the API
   const fetchRoles = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/roles", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await axios.get(
+        "https://property-preservation-plus.onrender.com/api/roles",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       setRoles(response.data);
     } catch (error) {
       setMessage("Error fetching roles.");
@@ -45,7 +48,7 @@ const CreateRoleForm = ({ onRoleCreated }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/roles",
+        "https://property-preservation-plus.onrender.com/api/roles",
         {
           name: roleName,
           access_level: parseInt(accessLevel), // Ensure access level is an integer
@@ -73,11 +76,14 @@ const CreateRoleForm = ({ onRoleCreated }) => {
   // Handle role deletion
   const handleDelete = async (roleId) => {
     try {
-      await axios.delete(`http://localhost:3000/api/roles/${roleId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`, // Pass token in Authorization header
-        },
-      });
+      await axios.delete(
+        `https://property-preservation-plus.onrender.com/api/roles/${roleId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Pass token in Authorization header
+          },
+        }
+      );
       setMessage("Role deleted successfully.");
       fetchRoles(); // Fetch roles again after deleting a role
     } catch (error) {

@@ -35,14 +35,17 @@ function CreateProperty() {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/api/properties", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(property),
-      });
+      const response = await fetch(
+        "https://property-preservation-plus.onrender.com/api/properties",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(property),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to create property");

@@ -24,9 +24,12 @@ const TenantsManager = () => {
     const fetchProperties = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:3000/api/properties", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const res = await axios.get(
+          "https://property-preservation-plus.onrender.com/api/properties",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
         setProperties(res.data);
       } catch (err) {
         console.error("Failed to fetch properties:", err);
@@ -42,7 +45,7 @@ const TenantsManager = () => {
         const token = localStorage.getItem("token");
         const companyId = JSON.parse(atob(token.split(".")[1])).company_id;
         const res = await axios.get(
-          `http://localhost:3000/api/tenants/${companyId}`,
+          `https://property-preservation-plus.onrender.com/api/tenants/${companyId}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -90,14 +93,14 @@ const TenantsManager = () => {
       const token = localStorage.getItem("token");
       if (editing) {
         await axios.put(
-          `http://localhost:3000/api/tenants/${id}`,
+          `https://property-preservation-plus.onrender.com/api/tenants/${id}`,
           { first_name, last_name, email, phone, property_id },
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setEditing(false);
       } else {
         await axios.post(
-          "http://localhost:3000/api/tenants",
+          "https://property-preservation-plus.onrender.com/api/tenants",
           { first_name, last_name, email, phone, property_id },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -113,7 +116,7 @@ const TenantsManager = () => {
       // Refetch tenants to get the updated list
       const companyId = JSON.parse(atob(token.split(".")[1])).company_id;
       const res = await axios.get(
-        `http://localhost:3000/api/tenants/${companyId}`,
+        `https://property-preservation-plus.onrender.com/api/tenants/${companyId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -132,13 +135,16 @@ const TenantsManager = () => {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:3000/api/tenants/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await axios.delete(
+        `https://property-preservation-plus.onrender.com/api/tenants/${id}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       // Refetch tenants after deletion
       const companyId = JSON.parse(atob(token.split(".")[1])).company_id;
       const res = await axios.get(
-        `http://localhost:3000/api/tenants/${companyId}`,
+        `https://property-preservation-plus.onrender.com/api/tenants/${companyId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

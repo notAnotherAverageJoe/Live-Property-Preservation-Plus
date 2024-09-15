@@ -21,7 +21,9 @@ const LeasesManager = () => {
 
   const fetchUnits = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/units");
+      const res = await axios.get(
+        "https://property-preservation-plus.onrender.com/api/units"
+      );
       setUnits(res.data);
     } catch (err) {
       setError("Failed to fetch units.");
@@ -30,7 +32,9 @@ const LeasesManager = () => {
 
   const fetchTenants = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/tenants");
+      const res = await axios.get(
+        "https://property-preservation-plus.onrender.com/api/tenants"
+      );
       setTenants(res.data);
     } catch (err) {
       setError("Failed to fetch tenants.");
@@ -52,7 +56,10 @@ const LeasesManager = () => {
     }
 
     try {
-      await axios.post("http://localhost:3000/api/leases", leaseData);
+      await axios.post(
+        "https://property-preservation-plus.onrender.com/api/leases",
+        leaseData
+      );
       alert("Lease created successfully");
       setLeaseData({
         unit_id: "",

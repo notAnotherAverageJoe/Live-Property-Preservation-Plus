@@ -50,9 +50,13 @@ const ProfilePage = () => {
 
   const handleUpdateProfile = async () => {
     try {
-      await axios.put(`http://localhost:3000/api/api/users/${id}`, formData, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await axios.put(
+        `https://property-preservation-plus.onrender.com/api/api/users/${id}`,
+        formData,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       setEditMode(false);
       setProfileData({ ...profileData, ...formData });
     } catch (error) {
@@ -63,7 +67,7 @@ const ProfilePage = () => {
   const handlePasswordUpdate = async () => {
     try {
       await axios.put(
-        `http://localhost:3000/api/api/users/${id}/password`,
+        `https://property-preservation-plus.onrender.com/api/api/users/${id}/password`,
         passwordData,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -81,9 +85,12 @@ const ProfilePage = () => {
 
   const handleDeleteProfile = async () => {
     try {
-      await axios.delete(`http://localhost:3000/users/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await axios.delete(
+        `https://property-preservation-plus.onrender.com/users/${id}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       navigate("/"); // Redirect after deletion
     } catch (error) {
       console.error("Error deleting profile:", error);

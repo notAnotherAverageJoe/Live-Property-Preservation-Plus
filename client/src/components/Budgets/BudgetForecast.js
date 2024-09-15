@@ -16,7 +16,7 @@ function BudgetForecast() {
     const fetchProperties = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/properties"
+          "https://property-preservation-plus.onrender.com/api/properties"
         );
         setProperties(response.data);
       } catch (error) {
@@ -34,10 +34,10 @@ function BudgetForecast() {
 
       try {
         const unitResponse = await axios.get(
-          `http://localhost:3000/api/properties/${selectedProperty}/units`
+          `https://property-preservation-plus.onrender.com/api/properties/${selectedProperty}/units`
         );
         const transactionResponse = await axios.get(
-          `http://localhost:3000/api/properties/${selectedProperty}/financial-transactions`
+          `https://property-preservation-plus.onrender.com/api/properties/${selectedProperty}/financial-transactions`
         );
 
         setUnits(unitResponse.data || []);

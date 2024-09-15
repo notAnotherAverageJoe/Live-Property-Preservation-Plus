@@ -18,7 +18,7 @@ const LeasesListByCompany = () => {
     setSubmitted(true);
 
     try {
-      const url = `http://localhost:3000/api/leases?company_id=${companyId}`;
+      const url = `https://property-preservation-plus.onrender.com/api/leases?company_id=${companyId}`;
       const response = await axios.get(url, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

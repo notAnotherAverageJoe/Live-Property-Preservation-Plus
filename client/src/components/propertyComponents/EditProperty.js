@@ -19,7 +19,7 @@ function EditProperty() {
 
       try {
         const response = await fetch(
-          `http://localhost:3000/api/properties/${id}`,
+          `https://property-preservation-plus.onrender.com/api/properties/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

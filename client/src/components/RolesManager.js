@@ -14,11 +14,14 @@ const RolesManager = () => {
   const fetchRoles = async () => {
     if (isAuthenticated && token) {
       try {
-        const response = await axios.get("http://localhost:3000/api/roles", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await axios.get(
+          "https://property-preservation-plus.onrender.com/api/roles",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
         setRoles(response.data);
       } catch (error) {
         console.error("Error fetching roles:", error.response || error);

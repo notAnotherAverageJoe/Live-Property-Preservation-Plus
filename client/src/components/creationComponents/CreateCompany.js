@@ -11,14 +11,17 @@ function CreateCompany() {
     const token = localStorage.getItem("token"); // Get token from localStorage
 
     try {
-      const response = await fetch("http://localhost:3000/api/companies", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, // Include token in headers
-        },
-        body: JSON.stringify({ name, address }),
-      });
+      const response = await fetch(
+        "https://property-preservation-plus.onrender.com/api/companies",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`, // Include token in headers
+          },
+          body: JSON.stringify({ name, address }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to create company");

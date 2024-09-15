@@ -17,9 +17,12 @@ const CreateUserForm = () => {
   useEffect(() => {
     const fetchRoles = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/roles", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const response = await axios.get(
+          "https://property-preservation-plus.onrender.com/api/roles",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
         setUserRoles(response.data.roles || []); // Ensure it's an array
       } catch (error) {
         console.error("Error fetching roles:", error);
@@ -34,7 +37,7 @@ const CreateUserForm = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:3000/api/users",
+        "https://property-preservation-plus.onrender.com/api/users",
         {
           email,
           role,

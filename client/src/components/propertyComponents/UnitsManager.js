@@ -33,7 +33,7 @@ const UnitsManager = ({ propertyId }) => {
         return;
       }
       const response = await axios.get(
-        `http://localhost:3000/api/properties/${propertyId}/units`
+        `https://property-preservation-plus.onrender.com/api/properties/${propertyId}/units`
       );
       setUnits(response.data);
     } catch (error) {
@@ -61,14 +61,17 @@ const UnitsManager = ({ propertyId }) => {
     try {
       if (selectedUnit) {
         await axios.put(
-          `http://localhost:3000/api/units/${selectedUnit.id}`,
+          `https://property-preservation-plus.onrender.com/api/units/${selectedUnit.id}`,
           formData
         );
       } else {
-        await axios.post(`http://localhost:3000/api/units`, {
-          ...formData,
-          property_id: propertyId,
-        });
+        await axios.post(
+          `https://property-preservation-plus.onrender.com/api/units`,
+          {
+            ...formData,
+            property_id: propertyId,
+          }
+        );
       }
       fetchUnits();
       setFormData({ unit_number: "", type: "", rent_amount: "" });
@@ -90,7 +93,9 @@ const UnitsManager = ({ propertyId }) => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/units/${id}`);
+      await axios.delete(
+        `https://property-preservation-plus.onrender.com/api/units/${id}`
+      );
       fetchUnits();
     } catch (error) {
       console.error("Error deleting unit:", error);

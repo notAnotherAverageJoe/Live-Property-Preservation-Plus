@@ -48,7 +48,10 @@ const CreateLease = ({ onLeaseCreated }) => {
     };
 
     try {
-      await axios.post("http://localhost:3000/api/leases", formattedLeaseData);
+      await axios.post(
+        "https://property-preservation-plus.onrender.com/api/leases",
+        formattedLeaseData
+      );
       alert("Lease created successfully");
 
       // Reset form fields after successful submission

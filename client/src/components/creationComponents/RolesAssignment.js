@@ -13,11 +13,14 @@ const RoleAssignment = ({ roles, onRoleAssigned }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/users", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await axios.get(
+          "https://property-preservation-plus.onrender.com/api/users",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
         setUsers(response.data);
       } catch (error) {
         console.error("Error fetching users:", error.response || error);
@@ -36,7 +39,7 @@ const RoleAssignment = ({ roles, onRoleAssigned }) => {
 
     try {
       await axios.post(
-        "http://localhost:3000/api/user-roles",
+        "https://property-preservation-plus.onrender.com/api/user-roles",
         { userId: selectedUserId, roleId: selectedRoleId },
         {
           headers: {
@@ -54,11 +57,14 @@ const RoleAssignment = ({ roles, onRoleAssigned }) => {
 
   const handleDeleteUser = async (userId) => {
     try {
-      await axios.delete(`http://localhost:3000/api/users/${userId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      await axios.delete(
+        `https://property-preservation-plus.onrender.com/api/users/${userId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       setMessage("User deleted successfully.");
       setUsers(users.filter((u) => u.id !== userId)); // Remove deleted user from the state
     } catch (error) {

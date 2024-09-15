@@ -45,11 +45,14 @@ function PropertiesList() {
       const token = localStorage.getItem("token");
 
       try {
-        const response = await fetch("http://localhost:3000/api/properties", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await fetch(
+          "https://property-preservation-plus.onrender.com/api/properties",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         if (!response.ok) {
           throw new Error("Failed to fetch properties");
@@ -74,7 +77,7 @@ function PropertiesList() {
     if (window.confirm("Are you sure you want to delete this property?")) {
       try {
         const response = await fetch(
-          `http://localhost:3000/api/properties/${id}`,
+          `https://property-preservation-plus.onrender.com/api/properties/${id}`,
           {
             method: "DELETE",
             headers: {

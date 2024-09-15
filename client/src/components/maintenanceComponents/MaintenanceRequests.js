@@ -23,7 +23,7 @@ const MaintenanceRequests = () => {
         return;
       }
       const response = await axios.get(
-        `http://localhost:3000/api/units/${unitId}/requests`
+        `https://property-preservation-plus.onrender.com/api/units/${unitId}/requests`
       );
       setRequests(response.data);
     } catch (error) {
@@ -50,13 +50,13 @@ const MaintenanceRequests = () => {
       if (selectedRequest) {
         // Update request
         await axios.put(
-          `http://localhost:3000/api/requests/${selectedRequest.id}`,
+          `https://property-preservation-plus.onrender.com/api/requests/${selectedRequest.id}`,
           formData
         );
       } else {
         // Create request
         await axios.post(
-          `http://localhost:3000/api/units/${unitId}/requests`,
+          `https://property-preservation-plus.onrender.com/api/units/${unitId}/requests`,
           formData
         );
       }
@@ -78,7 +78,9 @@ const MaintenanceRequests = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/requests/${id}`);
+      await axios.delete(
+        `https://property-preservation-plus.onrender.com/api/requests/${id}`
+      );
       fetchRequests();
     } catch (error) {
       console.error("Error deleting request:", error);

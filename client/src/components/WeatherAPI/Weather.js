@@ -18,7 +18,7 @@ function Weather() {
   const fetchWeatherData = async (city, state, retries = 3) => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/weather?city=${city}&state=${state}`
+        `https://property-preservation-plus.onrender.com/api/weather?city=${city}&state=${state}`
       );
       return response.data;
     } catch (error) {

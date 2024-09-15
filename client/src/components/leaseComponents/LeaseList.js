@@ -18,7 +18,7 @@ const LeasesList = () => {
       const companyId = JSON.parse(atob(token.split(".")[1])).company_id;
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/leases/company/${companyId}`,
+          `https://property-preservation-plus.onrender.com/api/leases/company/${companyId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

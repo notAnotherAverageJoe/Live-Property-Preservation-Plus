@@ -27,11 +27,14 @@ function Dashboard() {
           return;
         }
 
-        const response = await fetch("http://localhost:3000/api/user/company", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await fetch(
+          "https://property-preservation-plus.onrender.com/api/user/company",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         if (!response.ok) {
           throw new Error("Failed to fetch company data");

@@ -38,7 +38,7 @@ function AddTransactionForm() {
     const fetchTransactions = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/properties/${id}/financial-transactions`,
+          `https://property-preservation-plus.onrender.com/api/properties/${id}/financial-transactions`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -72,7 +72,7 @@ function AddTransactionForm() {
     try {
       if (editingTransactionId) {
         const response = await axios.put(
-          `http://localhost:3000/api/properties/${id}/financial-transactions/${editingTransactionId}`,
+          `https://property-preservation-plus.onrender.com/api/properties/${id}/financial-transactions/${editingTransactionId}`,
           transaction,
           {
             headers: {
@@ -88,7 +88,7 @@ function AddTransactionForm() {
         setEditingTransactionId(null);
       } else {
         const response = await axios.post(
-          `http://localhost:3000/api/properties/${id}/financial-transactions`,
+          `https://property-preservation-plus.onrender.com/api/properties/${id}/financial-transactions`,
           transaction,
           {
             headers: {
@@ -126,7 +126,7 @@ function AddTransactionForm() {
   const handleDelete = async (transactionId) => {
     try {
       await axios.delete(
-        `http://localhost:3000/api/properties/${id}/financial-transactions/${transactionId}`,
+        `https://property-preservation-plus.onrender.com/api/properties/${id}/financial-transactions/${transactionId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
