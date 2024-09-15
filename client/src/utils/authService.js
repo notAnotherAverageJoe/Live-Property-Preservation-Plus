@@ -5,7 +5,10 @@ const API_URL = "https://property-preservation-plus.onrender.com";
 // Register new user
 const register = async (userData) => {
   try {
-    const response = await axios.post(`${API_URL}/auth/register`, userData);
+    const response = await axios.post(
+      `https://property-preservation-plus.onrender.com/api/auth/register`,
+      userData
+    );
     return response.data;
   } catch (error) {
     // Check for specific error status codes
