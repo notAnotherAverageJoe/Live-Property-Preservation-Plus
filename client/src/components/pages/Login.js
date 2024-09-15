@@ -29,8 +29,8 @@ const Login = () => {
 
     try {
       const endpoint = isCreator
-        ? "http://localhost:3000/api/auth/creator-login"
-        : "http://localhost:3000/api/auth/login";
+        ? "https://property-preservation-plus.onrender.com/api/auth/creator-login"
+        : "https://property-preservation-plus.onrender.com/api/auth/login";
 
       const response = await axios.post(endpoint, { email, password });
 
