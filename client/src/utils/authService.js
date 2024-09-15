@@ -27,7 +27,7 @@ const register = async (userData) => {
 const login = async (userData) => {
   try {
     const response = await axios.post(
-      `https://property-preservation-plus.onrender.com/auth/login`,
+      `https://property-preservation-plus.onrender.com/api/auth/login`,
       userData
     );
     if (response.data.token) {
