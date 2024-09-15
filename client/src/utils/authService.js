@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://property-preservation-plus.onrender.com"; // Adjust as necessary
+const API_URL = "https://property-preservation-plus.onrender.com";
 
 // Register new user
 const register = async (userData) => {
