@@ -1,4 +1,6 @@
 const express = require("express");
+const path = require("path");
+
 const app = express();
 require("dotenv").config();
 const port = process.env.PORT || 3000;
@@ -24,7 +26,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "http://localhost:3001",
+    origin: "https://property-preservation-plus.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
@@ -96,7 +98,13 @@ app.get("/api/weather", async (req, res) => {
     res.status(500).json({ error: "Error fetching weather data" });
   }
 });
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "build")));
 
+// Serve the React app for all other routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 // Your middleware and routes here
 
 // Start server only if not in test environment
